@@ -74,8 +74,8 @@ login folder
 
 # MVP phases:
 Monday
-set up gems(bcrypt)
-* Data structures in place
+-set up gems(bcrypt)
+-Data structures in place
 * Basic app running
 * TDD!!!!!!
 

@@ -1,57 +1,14 @@
 Rails.application.routes.draw do
-  get 'time_entry/index'
-
-  get 'time_entry/new'
-
-  get 'time_entry/create'
-
-  get 'time_entry/show'
-
-  get 'time_entry/edit'
-
-  get 'time_entry/update'
-
-  get 'time_entry/destroy'
-
-  get 'project/index'
-
-  get 'project/new'
-
-  get 'project/create'
-
-  get 'project/show'
-
-  get 'project/edit'
-
-  get 'project/update'
-
-  get 'project/destroy'
-
-  get 'developer/index'
-
-  get 'developer/new'
-
-  get 'developer/create'
-
-  get 'developer/show'
-
-  get 'developer/edit'
-
-  get 'developer/update'
-
-  get 'developer/destroy'
-
-  get 'login/new'
-
-  get 'login/create'
-
-  get 'login/destroy'
+  resources :logins
+  resources :developers
+  resources :projects
+  resources :time_entries
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'logins#dashboard'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
