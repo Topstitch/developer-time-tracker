@@ -1,9 +1,9 @@
 # Controllers:
 
 * login_controller.rb
-  * index MAYBE...WHAT ELSE GOES HERE....**************RESTFUL LOGINS????
-  * login
-  * logout
+  * new
+  * create
+  * destroy
 * developer_controller.rb
   * index
   * new
@@ -35,7 +35,7 @@
   * def overtime?
 * projects.rb
   * def total_hours
-  * def maxed_out_time_budget?*******where do these methods go???
+  * def maxed_out_time_budget?
 * time_entries.rb
 
 # Views:
@@ -61,18 +61,20 @@ login folder
 
 # Tests:
 
-* controller test for every method**********really feel like creating the databases before I test; also, not doing these one at a time....
-* umm, are my models actually doing anything?***************
-* unit tests for every method
+
+* controller test for every method
+* unit tests for every method, also test for validations
 * integration tests*************how much to separate out vs. one long chain of doing stuff?
 
-  * developer can try to go to dashboard, get redirected, login, create a new developer, and create a new project
-  * developer can login, make three time entries, and see them reflected on the project list page
+  * developer can try to go to dashboard, get redirected, login, create a new developer, logs out, and then the new developer can log in
+  * developer logs in, and creates a new project, and then adds a time entry to that project
+  * developer can login, make three time entries, and goes on overtime.  Sees them reflected on the project list page
+
 
 
 # MVP phases:
 Monday
-* setup gems(bcrypt)
+set up gems(bcrypt)
 * Data structures in place
 * Basic app running
 * TDD!!!!!!
