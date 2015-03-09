@@ -76,8 +76,9 @@ login folder
 Monday
 -set up gems(bcrypt)
 -Data structures in place
-* Basic app running
 * TDD!!!!!!
+* Basic app running
+
 
 
 Tuesday
