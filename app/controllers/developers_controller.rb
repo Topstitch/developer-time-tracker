@@ -6,6 +6,7 @@ class DevelopersController < ApplicationController
   end
 
   def new
+    @developer = Developer.new
   end
 
   def create

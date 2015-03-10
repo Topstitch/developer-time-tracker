@@ -54,9 +54,16 @@ projects folder
 * edit.html.erb
 * _form.html.erb
 
+time entries folder
+
+* new.html.erb
+* edit.html.erb
+* _form.html.erb
+
 login folder
 
 * login.html.erb
+* new.html.erb
 * root: dashboard.html.erb: links to developer index and projects index
 * _form.html.erb
 
@@ -77,8 +84,8 @@ login folder
 Monday
 -set up gems(bcrypt)
 -Data structures in place
-* TDD!!!!!!
-* Basic app running
+-TDD!!!!!! (controller tests)
+-Basic app running
 
 
 
@@ -87,6 +94,11 @@ Tuesday
 * Up on Heroku
 * Math
 * Login
+* Validations
+* Decide where time entries logically live, possibly with hidden field for dev. id....where do you even see them to edit them?
+* Unit and Integration Tests
+
+
 
 Wednesday
 

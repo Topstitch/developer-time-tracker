@@ -6,12 +6,13 @@ class TimeEntriesController < ApplicationController
   end
 
   def new
+    @time_entry = TimeEntry.new
   end
 
   def create
     @time_entry = TimeEntry.new(time_entry_params)
     if @time_entry.save
-      redirect_to time_entries_path, notice: 'Time Entry was successfully created.'
+      redirect_to root_path, notice: 'Time Entry was successfully created.'
     else
       render :new
     end
@@ -25,7 +26,7 @@ class TimeEntriesController < ApplicationController
 
   def update
     if @time_entry.update(time_entry_params)
-      redirect_to time_entries_path, notice: 'Time Entry was successfully updated.'
+      redirect_to root_path, notice: 'Time Entry was successfully updated.'
     else
       render :edit
     end
@@ -33,7 +34,7 @@ class TimeEntriesController < ApplicationController
 
   def destroy
     @time_entry.destroy
-    redirect_to time_entries_path, notice: 'Time Entry was successfully deleted.'
+    redirect_to root_path, notice: 'Time Entry was successfully deleted.'
   end
 
   private
@@ -43,7 +44,7 @@ class TimeEntriesController < ApplicationController
   end
 
   def time_entry_params
-    params.require(:time_entry).permit(:name, :email, :password)
+    params.require(:time_entry).permit(:duration, :worked_on, :developer_id, :project_id)
   end
 
 end

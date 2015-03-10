@@ -2,6 +2,7 @@ class LoginsController < ApplicationController
   before_action :set_login, only: [:destroy]
 
   def new
+    @login = Login.new
   end
 
   def create
@@ -26,7 +27,8 @@ class LoginsController < ApplicationController
   end
 
   def login_params
-    params.require(:login).permit(:name, :email, :password)
+    # UNCERTAIN
+    params.require(:login).permit(:name)
   end
 
 end

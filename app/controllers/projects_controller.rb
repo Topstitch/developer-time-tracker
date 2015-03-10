@@ -6,6 +6,7 @@ class ProjectsController < ApplicationController
   end
 
   def new
+    @project = Project.new
   end
 
   def create
@@ -43,7 +44,7 @@ class ProjectsController < ApplicationController
   end
 
   def project_params
-    params.require(:project).permit(:name, :email, :password)
+    params.require(:project).permit(:name, :max_hours)
   end
-  
+
 end
