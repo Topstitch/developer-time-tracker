@@ -58,6 +58,7 @@ login folder
 
 * login.html.erb
 * root: dashboard.html.erb: links to developer index and projects index
+* _form.html.erb
 
 # Tests:
 
