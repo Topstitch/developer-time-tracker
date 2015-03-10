@@ -12,17 +12,15 @@ class LoginsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create login" do
-    assert_difference('Login.count') do
-      post :create
-    end
+  test "should initialize session" do
+    #check if session changed
+    post :create {parameters}
     assert_redirected_to root_path
   end
 
-  test "should destroy login" do
-    assert_difference('Logins.count', -1) do
-      delete :destroy
-    end
+  test "should destroy session" do
+    #check if session changed elsewise
+    delete :destroy
     assert_redirected_to new_login_path
   end
 

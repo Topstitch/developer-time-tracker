@@ -1,13 +1,14 @@
 class LoginsController < ApplicationController
-  before_action :set_login, only: [:destroy]
 
   def new
-    @login = Login.new
   end
 
+  def dashboard
+  end
+  
   def create
-    @login = Login.new(login_params)
-    if @login.save
+    if #the right username and password, then
+      #and change the session SOMEHOW
       redirect_to root_path, notice: 'Login was successful.'
     else
       render :new
@@ -16,19 +17,10 @@ class LoginsController < ApplicationController
 
 
   def destroy
-    @login.destroy
+    #change the session somehow
     redirect_to new_login_path, notice: 'You have logged out.'
   end
 
-  private
 
-  def set_login
-    @login = Login.find(params[:id])
-  end
-
-  def login_params
-    # UNCERTAIN
-    params.require(:login).permit(:name)
-  end
 
 end

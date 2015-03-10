@@ -87,15 +87,16 @@ Monday
 -TDD!!!!!! (controller tests)
 -Basic app running
 
+YEEE HA:COMPLETE
 
 
 Tuesday
 
-* Up on Heroku
+-Up on Heroku
 * Math
 * Login
 * Validations
-* Decide where time entries logically live, possibly with hidden field for dev. id....where do you even see them to edit them?
+* Decide where time entries logically live, possibly with hidden field for dev. id....where do you even see them to edit them?  allowed on dashboard
 * Unit and Integration Tests
 
 
