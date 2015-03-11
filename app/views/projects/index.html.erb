@@ -12,7 +12,7 @@
 
   <tbody>
     <% @projects.each do |project| %>
-      <tr>
+      <tr class="<%= "warning" if project.maxed_out_time_budget? %>">
         <td><%= project.name %></td>
         <td><%= project.max_hours %></td>
         <td><%= project.total_hours %></td>
