@@ -2,3 +2,35 @@
 
 <%= link_to 'Developers', developers_path %>
 <%= link_to 'Projects', projects_path %>
+
+<h2>Your Time Entries</h2>
+
+<p><%= link_to 'New Time Entry', new_time_entry_path %></p>
+
+<p>OVERTIME ALERT coming soon</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date Worked</th>
+      <th>Duration</th>
+      <th>project</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @time_entries.each do |entry| %>
+      <tr>
+        <td><%= entry.worked_on %></td>
+        <td><%= entry.duration %></td>
+        <td><%= entry.project.name %></td>
+
+        <td><%= link_to 'Edit', edit_time_entry_path(entry) %></td>
+        <td><%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

@@ -96,12 +96,14 @@ Tuesday
 * Math
 * Login
 * Validations
-* Decide where time entries logically live, possibly with hidden field for dev. id....where do you even see them to edit them?  allowed on dashboard
-* Unit and Integration Tests
+-Decide where time entries logically live
+
+* hidden field for dev id on time entry
 
 
 
 Wednesday
 
+* Unit and Integration Tests
 * Fix any disasters
 * Styling

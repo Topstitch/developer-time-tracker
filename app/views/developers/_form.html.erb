@@ -19,7 +19,7 @@
     <%= f.label :email %><br>
     <%= f.email_field :email %>
   </div>
-  <% if params[:page] == "new" %>
+  <% if @developer.id == nil %>
     <div class="field">
       <%= f.label :password %><br>
       <%= f.password_field :password %>
