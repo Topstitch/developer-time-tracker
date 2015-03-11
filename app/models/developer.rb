@@ -13,7 +13,7 @@ class Developer < ActiveRecord::Base
         weekly_hours << t.duration
       end
     end
-    weekly_total = weekly_hours.reduce(:+)
+    weekly_total = weekly_hours.reduce(:+) || 0
     if weekly_total > 40
       return true
     else

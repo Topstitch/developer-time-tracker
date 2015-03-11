@@ -111,3 +111,4 @@ FIX LOGIN TESTS, FIX TIME ENTRY TESTS
 * Unit and Integration Tests
 * Fix any disasters
 * Styling
+* CHECK for CLEAN and HAPPY code

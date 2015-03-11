@@ -12,7 +12,7 @@
 
   <tbody>
     <% @developers.each do |developer| %>
-      <tr>
+      <tr class="<%= "warning" if developer.overtime? %>">
         <td><%= developer.name %></td>
         <td><%= developer.email %></td>
         <td>Coming soon!!</td>

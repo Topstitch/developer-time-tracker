@@ -10,4 +10,8 @@ class Project < ActiveRecord::Base
     end
     all_hours.reduce(:+)
   end
+
+  def maxed_out_time_budget?
+    return true if total_hours > max_hours
+  end
 end
