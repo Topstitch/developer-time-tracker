@@ -5,6 +5,7 @@ class TimeEntriesControllerTest < ActionController::TestCase
     @time_entry = time_entries(:one)
     @developer = developers(:one)
     session[:developer_id] = @developer.id
+    @project = projects(:one)
   end
 
   test "should get new" do
@@ -14,7 +15,7 @@ class TimeEntriesControllerTest < ActionController::TestCase
 
   test "should create time_entry" do
     assert_difference('TimeEntry.count') do
-      post :create, time_entry: { duration: 2.5, worked_on: "2015-03-09", project_id: 1, developer_id: @developer.id}
+      post :create, time_entry: { duration: 2.5, worked_on: "2015-03-09", project_id: @project.id, developer_id: @developer.id}
     end
     assert_redirected_to root_path
   end
@@ -25,7 +26,7 @@ class TimeEntriesControllerTest < ActionController::TestCase
   end
 
   test "should update time_entry" do
-    patch :update, id: @time_entry, time_entry: { duration: 4.5, worked_on: "2015-03-09", project_id: 1, developer_id: @developer.id}
+    patch :update, id: @time_entry, time_entry: { duration: 4.5, worked_on: "2015-03-09", project_id: @project.id, developer_id: @developer.id}
     assert_redirected_to root_path
   end
 

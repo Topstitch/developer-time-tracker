@@ -5,16 +5,17 @@ class Developer < ActiveRecord::Base
   validates :email, uniqueness: true
 
   def overtime?
-    weekly_hours = []
+    weekly_hours = 0
     start_day = Time.now.beginning_of_week
     end_day = Time.now.end_of_week
     self.time_entries.each do |t|
-      if t.worked_on > start_day && t.worked_on < end_day
-        weekly_hours << t.duration
+      if t.worked_on >= start_day && t.worked_on <= end_day
+        weekly_hours += t.duration
       end
+      weekly_hours
     end
-    weekly_total = weekly_hours.reduce(:+) || 0
-    if weekly_total > 40
+
+    if weekly_hours > 40
       return true
     else
       return false
@@ -37,5 +38,22 @@ end
 #     t.all_week
 #
 #
+#   end
+# end
+
+# def overtime?
+#   weekly_hours = []
+#   start_day = Time.now.beginning_of_week
+#   end_day = Time.now.end_of_week
+#   self.time_entries.each do |t|
+#     if t.worked_on >= start_day && t.worked_on <= end_day
+#       weekly_hours << t.duration
+#     end
+#   end
+#   weekly_total = weekly_hours.reduce(:+) || 0
+#   if weekly_total > 40
+#     return true
+#   else
+#     return false
 #   end
 # end
