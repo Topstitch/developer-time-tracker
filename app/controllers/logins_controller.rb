@@ -1,5 +1,6 @@
 class LoginsController < ApplicationController
-
+  before_action :logged_in?, except: [:new, :create]
+  
   def new
   end
 
