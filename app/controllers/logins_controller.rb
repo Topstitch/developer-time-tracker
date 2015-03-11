@@ -1,11 +1,11 @@
 class LoginsController < ApplicationController
   before_action :logged_in?, except: [:new, :create]
-  
+
   def new
   end
 
   def dashboard
-    @time_entries = Developer.last.time_entries
+    @time_entries = @current_user.time_entries
   end
 
   def create

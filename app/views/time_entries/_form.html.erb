@@ -20,8 +20,7 @@
     <%= f.date_field :worked_on %>
   </div>
   <div class="field">
-    <%= f.label :developer_id %><br>
-    <%= f.collection_select :developer_id, Developer.all, :id, :name, {:include_blank => ""} %>
+    <%= f.hidden_field :developer_id, :value => current_user.id %>
   </div>
   <div class="field">
     <%= f.label :project_id %><br>

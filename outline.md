@@ -99,14 +99,15 @@ Tuesday
 -Decide where time entries logically live
 
 * hidden field for dev id on time entry
-
+BLEHHH, SEVERAL UNDONE
 
 
 Wednesday
 
 ASK: FRANKENSTEIN LOGIN METHOD
 FIX LOGIN TESTS, FIX TIME ENTRY TESTS
-
+* Math
+-hidden field for dev id on time entry
 * Unit and Integration Tests
 * Fix any disasters
 * Styling

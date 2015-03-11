@@ -7,7 +7,9 @@
 
 <p><%= link_to 'New Time Entry', new_time_entry_path %></p>
 
-<p>OVERTIME ALERT coming soon</p>
+<% if @current_user.overtime? %>
+<p>WARNING: YOU ARE CURRENTLY IN OVERTIME FOR THE WEEK</p>
+<% end %>
 
 <table>
   <thead>
