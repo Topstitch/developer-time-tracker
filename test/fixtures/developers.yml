@@ -2,10 +2,10 @@
 
 one:
   name: MyString
-  email: MyString
-  password_digest: MyString
+  email: sj@dev.com
+  password_digest: <%= BCrypt::Password.create("password", cost: 6) %>
 
 two:
   name: MyString
   email: MyString
-  password_digest: MyString
+  password_digest: <%= BCrypt::Password.create("password", cost: 6) %>

@@ -1,7 +1,8 @@
 class Developer < ActiveRecord::Base
   has_secure_password
   has_many :time_entries
-
+  validates :name, :email, :password, presence: true
+  validates :email, uniqueness: true
   # def overtime?
   #   weekly_time = []
   #   self.time_entries.each.worked_on do |t|

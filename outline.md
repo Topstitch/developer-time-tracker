@@ -94,8 +94,8 @@ Tuesday
 
 -Up on Heroku
 * Math
-* Login
-* Validations
+-Login
+-Validations
 -Decide where time entries logically live
 
 * hidden field for dev id on time entry
@@ -103,6 +103,9 @@ Tuesday
 
 
 Wednesday
+
+ASK: FRANKENSTEIN LOGIN METHOD
+FIX LOGIN TESTS, FIX TIME ENTRY TESTS
 
 * Unit and Integration Tests
 * Fix any disasters

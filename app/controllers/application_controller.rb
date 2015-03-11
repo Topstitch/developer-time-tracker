@@ -6,10 +6,6 @@ class ApplicationController < ActionController::Base
 
   private
 
-  # def set_session
-  #   session[:name] = params[:name] if params[:name]
-  # end
-
   def current_user
     @current_user = Developer.find_by_id(session[:developer_id])
   end
