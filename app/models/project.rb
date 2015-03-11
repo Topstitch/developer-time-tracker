@@ -12,6 +12,10 @@ class Project < ActiveRecord::Base
   end
 
   def maxed_out_time_budget?
-    return true if total_hours > max_hours
+    if self.total_hours == nil || self.total_hours < max_hours
+      return false
+    else
+      return true
+    end
   end
 end

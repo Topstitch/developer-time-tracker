@@ -104,9 +104,9 @@ BLEHHH, SEVERAL UNDONE
 
 Wednesday
 
-ASK: FRANKENSTEIN LOGIN METHOD
-FIX LOGIN TESTS, FIX TIME ENTRY TESTS
-* Math
+-ASK: FRANKENSTEIN LOGIN METHOD...could have put 0 or 1 or any integer in there by the logout button, it just needs something
+-FIX LOGIN TESTS, FIX TIME ENTRY TESTS
+-Math
 -hidden field for dev id on time entry
 * Unit and Integration Tests
 * Fix any disasters

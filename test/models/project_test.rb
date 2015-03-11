@@ -10,4 +10,6 @@ class ProjectTest < ActiveSupport::TestCase
     project = Project.new(name:"MyString", max_hours: 5)
     assert_not project.save
   end
+
+  
 end
