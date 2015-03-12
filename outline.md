@@ -115,4 +115,5 @@ Wednesday
 * CHECK for CLEAN and HAPPY code
 
 Thursday
-* Is get root path necessary after redirected to???
+-Is get root path necessary after redirected to??? do the follow_redirect ! or no?
+* Break up giant test or not???
