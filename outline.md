@@ -118,7 +118,12 @@ YEEE BLEHH  almost there!
 
 Thursday
 -Is get root path necessary after redirected to??? do the follow_redirect ! or no?
-* Break up giant test or not???
+-Break up giant test or not??? NOT
+
+Developers can create/edit/delete time entries for themselves, not for other developers.
+No one can delete a developer once that developer has made a time entry.
+No one can delete a project once that project has a time entry on it.
 
 * Integration tests 2 & 3
+* TEST NEW 3 THINGS
 * styling

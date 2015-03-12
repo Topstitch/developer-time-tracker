@@ -1,11 +1,11 @@
 <h1>Welcome to the Time Tracker, <%=@current_user.name%>!</h1>
 
 <%= link_to 'Developers', developers_path, id: "dev-index-link" %>
-<%= link_to 'Projects', projects_path %>
+<%= link_to 'Projects', projects_path, id: "proj-index-link" %>
 
 <h2>Your Time Entries</h2>
 
-<p><%= link_to 'New Time Entry', new_time_entry_path %></p>
+<p><%= link_to 'New Time Entry', new_time_entry_path, id: "new-entry-link" %></p>
 
 <% if @current_user.overtime? %>
 <p>WARNING: YOU ARE CURRENTLY IN OVERTIME FOR THE WEEK</p>
