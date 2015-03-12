@@ -108,7 +108,11 @@ Wednesday
 -FIX LOGIN TESTS, FIX TIME ENTRY TESTS
 -Math
 -hidden field for dev id on time entry
-* Unit and Integration Tests
-* Fix any disasters
+-Unit Tests
+* Integration Tests
+-Fix any disasters
 * Styling
 * CHECK for CLEAN and HAPPY code
+
+Thursday
+* Is get root path necessary after redirected to???

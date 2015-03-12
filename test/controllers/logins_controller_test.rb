@@ -14,16 +14,15 @@ class LoginsControllerTest < ActionController::TestCase
   end
 
   test "should initialize session" do
-    #check if session changed
     post :create, {email: "sj@dev.com", password: "password"}
     assert session[:developer_id]
     assert_redirected_to root_path
   end
 
   test "should destroy session" do
-    #check if session changed elsewise
-    # delete :destroy
-    # assert_redirected_to new_login_path
+    delete :destroy, {id: developers(:one).id}
+    assert_equal nil, session[:developer_id]
+    assert_redirected_to new_login_path
   end
 
 end
