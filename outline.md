@@ -112,8 +112,13 @@ Wednesday
 * Integration Tests
 -Fix any disasters
 * Styling
-* CHECK for CLEAN and HAPPY code
+* CHECK for CLEAN and HAPPY code...i mean, kind of
+
+YEEE BLEHH  almost there!
 
 Thursday
 -Is get root path necessary after redirected to??? do the follow_redirect ! or no?
 * Break up giant test or not???
+
+* Integration tests 2 & 3
+* styling

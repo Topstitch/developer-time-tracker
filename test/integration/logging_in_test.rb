@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class LoggingInTest < ActionDispatch::IntegrationTest
-  #developer can try to go to dashboard, get redirected, login, create a new developer, logs out, and then the new developer can log in
+  #developer can try to go to the dashboard, get redirected, login, create a new developer, log out, and then the new developer can log in
   setup do
     @developer = developers(:one)
   end
