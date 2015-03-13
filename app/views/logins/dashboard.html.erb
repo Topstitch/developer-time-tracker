@@ -8,7 +8,7 @@
 <p><%= link_to 'New Time Entry', new_time_entry_path, id: "new-entry-link" %></p>
 
 <% if @current_user.overtime? %>
-<p>WARNING: YOU ARE CURRENTLY IN OVERTIME FOR THE WEEK</p>
+<p id = "overtime-warning">WARNING: YOU ARE CURRENTLY IN OVERTIME FOR THE WEEK</p>
 <% end %>
 
 <table>

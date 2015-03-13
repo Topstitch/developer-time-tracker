@@ -23,4 +23,13 @@ class DeveloperTest < ActiveSupport::TestCase
     time_entry4 = TimeEntry.new(duration: 15, worked_on: "2015-03-30", project_id: 1, developer_id: developer2.id)
     assert_equal false, developer2.overtime?
   end
+
+  test "can't delete a developer with time entries" do
+    developer = developers(:one)
+    time_entry = TimeEntry.new(duration: 30, worked_on: "2015-03-09", project_id: 1, developer_id: developer.id)
+    developer.destroy
+    refute developer == nil
+  end
+
+
 end

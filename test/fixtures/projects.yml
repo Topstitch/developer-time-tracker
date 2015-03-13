@@ -2,8 +2,8 @@
 
 one:
   max_hours: 1
-  name: MyString
+  name: Tacocat
 
 two:
   max_hours: 1
-  name: MyString
+  name: Potato

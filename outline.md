@@ -124,8 +124,9 @@ Thursday
 -No one can delete a developer once that developer has made a time entry.
 -No one can delete a project once that project has a time entry on it.
 
-Exceptions aren't beautiful, but they work...
+Errors seem to be clunky code, but they work...
 
-* Integration tests 2 & 3
-* TEST NEW 3 THINGS
+-Integration test 2
+* & 3
+-TEST NEW 3 THINGS not sure if it's the greatest syntax for the can't deletes, but they seem to work
 * styling
