@@ -35,8 +35,11 @@ class DevelopersController < ApplicationController
   end
 
   def destroy
-    @developer.destroy
-    redirect_to developers_path, notice: 'Developer was successfully deleted.'
+    if @developer.destroy
+      redirect_to developers_path, notice: 'Developer was successfully deleted.'
+    else
+      redirect_to developers_path, notice: 'You cannot delete this developer due to their associated records.'
+    end
   end
 
   private
