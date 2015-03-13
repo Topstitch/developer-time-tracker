@@ -1,11 +1,11 @@
 <%= form_tag logins_path do %>
-  <div>
+  <div class = "form-group">
     <%= label_tag :email %><br />
     <%= text_field_tag :email, params[:email] %>
   </div>
-  <div>
+  <div class = "form-group">
     <%= label_tag :password %><br />
     <%= password_field_tag :password %>
   </div>
-  <div><%= submit_tag "Log in" %></div>
+  <div class = "form-group"><%= submit_tag "Log in", class: "btn btn-default" %></div>
 <% end %>

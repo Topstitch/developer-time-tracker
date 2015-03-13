@@ -1,12 +1,14 @@
-<h1>Projects</h1>
+<h2>Projects</h2>
 
-<table>
+<p><%= link_to 'New Project', new_project_path, id: "new-proj-link" %></p>
+
+<table class = "table table-bordered">
   <thead>
     <tr>
       <th>Name</th>
       <th>Max Hours Allowed</th>
       <th>Total Hours Worked</th>
-      <th colspan="3"></th>
+      <th colspan="3">Options</th>
     </tr>
   </thead>
 
@@ -17,14 +19,11 @@
         <td><%= project.max_hours %></td>
         <td><%= project.total_hours %></td>
 
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class = "text-center"><%= link_to 'Edit', edit_project_path(project) %></td>
+        <td class = "text-center"><%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Project', new_project_path, id: "new-proj-link" %>
-<%= link_to 'Back', root_path, id: "go-to-root" %>

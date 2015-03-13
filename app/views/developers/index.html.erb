@@ -1,12 +1,14 @@
-<h1>Developers</h1>
+<h2>Developers</h2>
 
-<table>
+<p><%= link_to 'New Developer', new_developer_path, id: "new-dev-link" %></p>
+
+<table class = "table table-bordered">
   <thead>
     <tr>
       <th>Name</th>
       <th>Email</th>
       <th>Hours Worked This Week</th>
-      <th colspan="3"></th>
+      <th colspan="3">Options</th>
     </tr>
   </thead>
 
@@ -17,14 +19,9 @@
         <td><%= developer.email %></td>
         <td><%= developer.total_hours %></td>
 
-        <td><%= link_to 'Edit', edit_developer_path(developer) %></td>
-        <td><%= link_to 'Destroy', developer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class = "text-center"><%= link_to 'Edit', edit_developer_path(developer) %></td>
+        <td class = "text-center"><%= link_to 'Delete', developer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Developer', new_developer_path, id: "new-dev-link" %>
-<%= link_to 'Back', root_path %>

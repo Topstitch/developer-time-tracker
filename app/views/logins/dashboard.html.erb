@@ -1,8 +1,3 @@
-<h1>Welcome to the Time Tracker, <%=@current_user.name%>!</h1>
-
-<%= link_to 'Developers', developers_path, id: "dev-index-link" %>
-<%= link_to 'Projects', projects_path, id: "proj-index-link" %>
-
 <h2>Your Time Entries</h2>
 
 <p><%= link_to 'New Time Entry', new_time_entry_path, id: "new-entry-link" %></p>
@@ -11,13 +6,13 @@
 <p id = "overtime-warning">WARNING: YOU ARE CURRENTLY IN OVERTIME FOR THE WEEK</p>
 <% end %>
 
-<table>
+<table class= "table table-bordered">
   <thead>
     <tr>
       <th>Date Worked</th>
       <th>Duration</th>
       <th>Project</th>
-      <th colspan="3"></th>
+      <th colspan="3">Options</th>
     </tr>
   </thead>
 
@@ -25,14 +20,12 @@
     <% @time_entries.each do |entry| %>
       <tr>
         <td><%= entry.worked_on %></td>
-        <td><%= entry.duration %></td>
+        <td><%= entry.duration %> hours</td>
         <td><%= entry.project.name %></td>
 
-        <td><%= link_to 'Edit', edit_time_entry_path(entry) %></td>
-        <td><%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class = "text-center"><%= link_to 'Edit', edit_time_entry_path(entry) %></td>
+        <td class = "text-center"><%= link_to 'Delete', entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>

@@ -127,6 +127,6 @@ Thursday
 Errors seem to be clunky code, but they work...
 
 -Integration test 2
-* & 3
+-& 3
 -TEST NEW 3 THINGS not sure if it's the greatest syntax for the can't deletes, but they seem to work
 * styling
