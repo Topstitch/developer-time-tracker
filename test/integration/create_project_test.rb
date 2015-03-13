@@ -6,7 +6,7 @@ class CreateProjectTest < ActionDispatch::IntegrationTest
     @developer = developers(:one)
   end
 
-  test "logging in" do
+  test "create project with a time entry" do
     get root_path
     assert_redirected_to new_login_path
     post logins_path, {email: "sj@dev.com", password: "password"}

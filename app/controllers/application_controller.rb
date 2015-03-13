@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   private
 
   def current_user
-    @current_user = Developer.find_by_id(session[:developer_id])
+    @current_user ||= Developer.find_by_id(session[:developer_id])
   end
 
   def logged_in?
@@ -15,4 +15,5 @@ class ApplicationController < ActionController::Base
       redirect_to new_login_path
     end
   end
+  
 end

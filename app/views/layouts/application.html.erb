@@ -10,6 +10,7 @@
 
 <p id="notice"><%= notice %></p>
 
+
 <% if session[:developer_id] %>
   <p><%= link_to 'Log Out', login_path(session[:developer_id]), method: :delete, data: { confirm: 'Are you sure?' } %></p>
 

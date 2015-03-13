@@ -1,6 +1,7 @@
 class DevelopersController < ApplicationController
   before_action :set_developer, only: [:show, :edit, :update, :destroy]
   before_action :logged_in?
+  before_action :developer_match?, only: [:edit, :update, :destroy]
 
   def index
     @developers = Developer.all
@@ -47,4 +48,11 @@ class DevelopersController < ApplicationController
   def developer_params
     params.require(:developer).permit(:name, :email, :password)
   end
+
+  def developer_match?
+    if current_user.id != @developer.id
+      redirect_to developers_path, notice: 'You can only edit your own records.'
+    end
+  end
+
 end

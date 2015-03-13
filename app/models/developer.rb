@@ -1,10 +1,10 @@
 class Developer < ActiveRecord::Base
   has_secure_password
-  has_many :time_entries
+  has_many :time_entries, :dependent => :restrict_with_error {"potato"}
   validates :name, :email, :password, presence: true
   validates :email, uniqueness: true
 
-  def overtime?
+  def total_hours
     weekly_hours = 0
     start_day = Time.now.beginning_of_week
     end_day = Time.now.end_of_week
@@ -12,12 +12,11 @@ class Developer < ActiveRecord::Base
       if t.worked_on >= start_day && t.worked_on <= end_day
         weekly_hours += t.duration
       end
-      weekly_hours
     end
-    if weekly_hours > 40
-      return true
-    else
-      return false
-    end
+    weekly_hours
+  end
+
+  def overtime?
+    total_hours > 40
   end
 end

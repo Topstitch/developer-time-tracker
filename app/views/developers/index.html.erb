@@ -15,7 +15,7 @@
       <tr class="<%= "warning" if developer.overtime? %>">
         <td><%= developer.name %></td>
         <td><%= developer.email %></td>
-        <td>Coming soon!!</td>
+        <td><%= developer.total_hours %></td>
 
         <td><%= link_to 'Edit', edit_developer_path(developer) %></td>
         <td><%= link_to 'Destroy', developer, method: :delete, data: { confirm: 'Are you sure?' } %></td>

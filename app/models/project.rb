@@ -1,5 +1,5 @@
 class Project < ActiveRecord::Base
-  has_many :time_entries
+  has_many :time_entries, :dependent => :restrict_with_exception
   validates :max_hours, :name, presence: true
   validates :name, uniqueness: true
 
